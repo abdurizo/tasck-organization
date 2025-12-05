@@ -1,0 +1,35 @@
+.wrap {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 10px;
+}
+.item {
+  background-color: #cccccc28;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.block_left,
+.block_right {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.item_id {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: #d4a9d1;
+  color: #b25ed3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.count_courses,
+.course {
+  color: #b25ed3;
+  font-weight: 700;
+}

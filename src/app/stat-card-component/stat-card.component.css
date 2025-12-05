@@ -1,0 +1,33 @@
+.card {
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.block_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrap_icon {
+  width: 40px;
+  height: 40px;
+  background-color: #cccccca1;
+  border-radius: 10px;
+}
+.stat {
+  width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.stat_percentage {
+  background-color: #acfcc980;
+  border-radius: 10px;
+  padding: 5px 15px 5px 5px;
+  color: #359435;
+}
+.stat_text {
+  color: #359435;
+  font-weight: 500;
+}

@@ -1,0 +1,24 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.title{
+ font-weight: 700;   
+}
+.sub_title{
+    font-size: 14px;
+    color: #919090;
+}
+.add_organizftion{
+    background-color: blue;
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px;
+    margin-left: 5px;
+}
+.calendar{
+   background-color: #fff;
+   padding: 10px;
+}
