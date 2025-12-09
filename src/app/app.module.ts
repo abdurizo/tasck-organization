@@ -10,6 +10,7 @@ import { TopListComponent } from './top-list-component/top-list.component';
 import { AllOrganizationComponent } from './all-organization/all-organization.component';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
+import { EditFormComponent } from './edit-form/edit-form.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { NzDividerModule } from 'ng-zorro-antd/divider';
     TopListComponent,
     TopListItemComponent,
     AllOrganizationComponent,
+    EditFormComponent,
   ],
   imports: [
     BrowserModule,

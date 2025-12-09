@@ -11,6 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 10px;
 }
 .block_left,
 .block_right {
@@ -22,14 +23,14 @@
   width: 20px;
   height: 20px;
   border-radius: 100%;
-  background-color: #d4a9d1;
-  color: #b25ed3;
+  /* background-color: #e2b65777; */
+  color: #dd902a;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .count_courses,
 .course {
-  color: #b25ed3;
+  /* color: #b25ed3; */
   font-weight: 700;
 }

@@ -2,15 +2,16 @@
   <div class="header">
     <span class="header_icon"></span>
     <span class="header_text">Топ по количеству курсов</span>
+    <!-- <span class="header_text">{{с}} </span> -->
   </div>
-  <div class="item">
+  <div class="item" *ngFor="let cour of cours">
     <div class="block_left">
-      <div class="item_id">1</div>
-      <div class="item_tirle">ООО"Учпех"</div>
+      <div class="item_id"  [style.background]="theme.bg">{{cour.id}} </div>
+      <div class="item_tirle">{{cour.first_name}} </div>
     </div>
     <div class="block_right">
-        <div class="count_courses">45</div>
-        <div class="course">курсов</div>
+        <div class="count_courses" [style.color]="theme.text">{{cour.quantity}} </div>
+        <div class="course" [style.color]="theme.text">{{cour.last_name}}</div>
     </div> 
   </div>
 </div>

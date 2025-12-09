@@ -24,3 +24,6 @@ input{
     margin: 0 auto;
     padding: 0 10px;
 }
+.ant-table-pagination.ant-pagination{
+    margin-right: 10px ;
+}

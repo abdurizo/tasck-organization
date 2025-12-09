@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 interface Person {
   organ: string;
-  status: boolean;
+  status: string;
   cours: number;
   batch: number;
   price: string;
@@ -18,7 +18,7 @@ export class AllOrganizationComponent {
   listOfData: Person[] = [
     {
       organ: 'Otcom',
-      status: true,
+      status: 'active',
       cours: 65,
       batch: 1,
       price: 'Male',
@@ -26,7 +26,7 @@ export class AllOrganizationComponent {
     },
     {
       organ: 'Sonair',
-      status: true,
+      status: 'active',
       cours: 59,
       batch: 2,
       price: 'Male',
@@ -34,7 +34,7 @@ export class AllOrganizationComponent {
     },
     {
       organ: 'Bytecard',
-      status: true,
+      status: 'active',
       cours: 43,
       batch: 3,
       price: 'Male',
@@ -42,7 +42,7 @@ export class AllOrganizationComponent {
     },
     {
       organ: 'Overhold',
-      status: true,
+      status: 'active',
       cours: 72,
       batch: 4,
       price: 'Female',
@@ -50,7 +50,7 @@ export class AllOrganizationComponent {
     },
     {
       organ: 'Trippledex',
-      status: true,
+      status: 'active',
       cours: 69,
       batch: 5,
       price: 'Male',

@@ -1,27 +1,25 @@
-<nz-table #basicTable [nzData]="listOfData">
-  <thead>
-    <tr>
-      <th>Организация</th>
-      <th>Статус</th>
-      <th>Курсы</th>
-      <th>Пакеты</th>
-      <th>Сумма</th>
-      <th>Действия</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let data of basicTable.data">
-      <td>{{data.organ}}</td>
-      <td>{{data.status}}</td>
-      <td>{{data.cours}}</td>
-      <td>{{data.batch}}</td>
-      <td>{{data.price}}</td>
-      <td>{{data.actions}}</td>
-      <td>
-        
-        <!-- <nz-divider nzType="vertical"></nz-divider> -->
-     
-      </td>
-    </tr>
-  </tbody>
-</nz-table>
+<div class="wrap">
+  <h2 class="title">Все организации</h2>
+  <nz-table #basicTable [nzData]="listOfData">
+    <thead>
+      <tr>
+        <th>Организация</th>
+        <th>Статус</th>
+        <th>Курсы</th>
+        <th>Пакеты</th>
+        <th>Сумма</th>
+        <th>Действия</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of basicTable.data">
+        <td>{{ data.organ }}</td>
+        <td ><div class="status">{{ data.status }}</div></td>
+        <td>{{ data.cours }}</td>
+        <td>{{ data.batch }}</td>
+        <td>{{ data.price }}</td>
+        <td>{{ data.actions }}</td>
+      </tr>
+    </tbody>
+  </nz-table>
+</div>
