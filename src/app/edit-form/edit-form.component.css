@@ -1,0 +1,31 @@
+.input_name{
+    margin-bottom: 5px;
+}
+.input{
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding:5px;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 5px;
+}
+.wrap_button{
+    display: flex;
+    justify-content: end;
+}
+.button{
+    padding: 10px;
+    font-weight: 600;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #5576d1;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 5px;
+    transition: 0.3s;
+}
+.button:hover{
+    background-color: #5576d1c5;
+    transition: 0.3s;
+}

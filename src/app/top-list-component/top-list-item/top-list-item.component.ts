@@ -1,11 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { Cours } from '../../models/organization-model';
 
-interface Cours {
-  id: number;
-  first_name: string;
-  quantity: number;
-  last_name: string;
-}
 
 @Component({
   selector: 'app-top-list-item',

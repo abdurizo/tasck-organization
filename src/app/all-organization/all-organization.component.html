@@ -14,12 +14,21 @@
     <tbody>
       <tr *ngFor="let data of basicTable.data">
         <td>{{ data.organ }}</td>
-        <td ><div class="status">{{ data.status }}</div></td>
+        <td>
+          <div class="status">{{ data.status }}</div>
+        </td>
         <td>{{ data.cours }}</td>
         <td>{{ data.batch }}</td>
         <td>{{ data.price }}</td>
-        <td>{{ data.actions }}</td>
+        <td class="edit" (click)="openModal()">✏️ {{ data.actions }}</td>
       </tr>
     </tbody>
   </nz-table>
+</div>
+<!-- MODAL -->
+<div class="modal" *ngIf="isOpen">
+  <div class="modal-content">
+    <button class="close" (click)="closeModal()">✖</button>
+    <app-edit-form></app-edit-form>
+  </div>
 </div>

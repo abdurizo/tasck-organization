@@ -11,6 +11,7 @@ import { AllOrganizationComponent } from './all-organization/all-organization.co
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { EditFormComponent } from './edit-form/edit-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { EditFormComponent } from './edit-form/edit-form.component';
     BrowserModule,
     AppRoutingModule,
     NzTableModule,
-    NzDividerModule
+    NzDividerModule,
+    FormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

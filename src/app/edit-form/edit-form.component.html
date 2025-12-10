@@ -1,0 +1,23 @@
+<form #f="ngForm" (ngSubmit)="submit(f)">
+  <p class="input_name">Организация</p>
+  <input name="organ" ngModel class="input" />
+
+  <p class="input_name">Статус</p>
+  <!-- <input name="status" ngModel class="input" /> -->
+  <select name="status" ngModel>
+    <option value="active">ative</option>
+    <option value="inactive">inative</option>
+  </select>
+  <p class="input_name">Курсы</p>
+  <input name="cours" ngModel class="input" />
+
+  <p class="input_name">Пакеты</p>
+  <input name="batch" ngModel class="input" />
+
+  <p class="input_name">Сумма</p>
+  <input name="price" ngModel class="input" />
+
+  <div class="wrap_button">
+    <button [disabled]="f.invalid" class="button">Submit</button>
+  </div>
+</form>

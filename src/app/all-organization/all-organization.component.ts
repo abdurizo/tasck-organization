@@ -1,13 +1,5 @@
 import { Component } from '@angular/core';
-
-interface Person {
-  organ: string;
-  status: string;
-  cours: number;
-  batch: number;
-  price: string;
-  actions: string;
-}
+import { Person } from '../models/organization-model';
 
 @Component({
   selector: 'app-all-organization',
@@ -18,43 +10,54 @@ export class AllOrganizationComponent {
   listOfData: Person[] = [
     {
       organ: 'Otcom',
-      status: 'active',
+      status: 'Active',
       cours: 65,
       batch: 1,
-      price: 'Male',
-      actions: '21.183.89.122',
+      price: '$2.42',
+      actions: 'Edit',
     },
     {
       organ: 'Sonair',
-      status: 'active',
+      status: 'Active',
       cours: 59,
       batch: 2,
-      price: 'Male',
-      actions: '1.77.48.233',
+      price: '$4.96',
+      actions: 'Edit',
     },
     {
       organ: 'Bytecard',
-      status: 'active',
+      status: 'Active',
       cours: 43,
       batch: 3,
-      price: 'Male',
-      actions: '225.116.152.84',
+      price: '$2.10',
+      actions: 'Edit',
     },
     {
       organ: 'Overhold',
-      status: 'active',
+      status: 'Active',
       cours: 72,
       batch: 4,
-      price: 'Female',
-      actions: '81.106.120.39',
+      price: '$9.77',
+      actions: 'Edit',
     },
     {
       organ: 'Trippledex',
-      status: 'active',
+      status: 'Active',
       cours: 69,
       batch: 5,
-      price: 'Male',
-      actions: '37.195.86.174',
+      price: '$8.29',
+      actions: 'Edit',
     },
   ];
+  /**
+   * 
+   */
+  isOpen=false;  
+  openModal(){
+    this.isOpen=true;
+    console.log(this.isOpen);
+  }
+  closeModal(){
+    this.isOpen=false
+  }
 }
