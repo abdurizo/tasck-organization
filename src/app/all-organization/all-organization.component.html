@@ -1,6 +1,6 @@
 <div class="wrap">
   <h2 class="title">Все организации</h2>
-  <nz-table #basicTable [nzData]="listOfData">
+  <nz-table #basicTable [nzData]="organizDate">
     <thead>
       <tr>
         <th>Организация</th>
@@ -15,12 +15,19 @@
       <tr *ngFor="let data of basicTable.data">
         <td>{{ data.organ }}</td>
         <td>
-          <div class="status">{{ data.status }}</div>
+          <div
+            [ngClass]="{
+              'status_active': data.status === 'Active',
+              'status_inactive': data.status === 'Inactive'
+            }"
+          >
+            {{ data.status}}
+          </div>
         </td>
         <td>{{ data.cours }}</td>
         <td>{{ data.batch }}</td>
         <td>{{ data.price }}</td>
-        <td class="edit" (click)="openModal()">✏️ {{ data.actions }}</td>
+        <td class="edit" (click)="openModal(data.id)">✏️ {{ data.actions }}</td>
       </tr>
     </tbody>
   </nz-table>
@@ -29,6 +36,6 @@
 <div class="modal" *ngIf="isOpen">
   <div class="modal-content">
     <button class="close" (click)="closeModal()">✖</button>
-    <app-edit-form></app-edit-form>
+    <app-edit-form [organizId]="selectedId" (saved)="onSaved($event)"></app-edit-form>
   </div>
 </div>

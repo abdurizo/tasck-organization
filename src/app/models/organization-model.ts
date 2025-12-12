@@ -1,4 +1,5 @@
-export interface Person {
+export interface OrganizInterface {
+  id: number;
   organ: string;
   status: string;
   cours: number;
@@ -7,9 +8,9 @@ export interface Person {
   actions: string;
 }
 /**
- * 
+ *
  */
-export interface Cours{
+export interface Cours {
   id: number;
   first_name: string;
   quantity: number;

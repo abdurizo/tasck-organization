@@ -8,11 +8,18 @@
     padding: 10px;
     font-size: 16px;
 }
-.status{
+.status_active,
+.status_inactive{
     border-radius: 10px;
-    background-color: #67fa8c86;
+    
     display: inline-block;
     padding: 3px 10px;
+}
+.status_active{
+background-color: #67fa8c4f;
+}
+.status_inactive{
+  background-color: rgba(247, 131, 102, 0.356);
 }
 .edit{
     color: blue;
