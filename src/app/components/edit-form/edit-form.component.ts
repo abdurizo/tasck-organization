@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { OrganizInterface } from '../models/organization-model';
-import { OrganizationService } from '../services/organization.service';
+import { OrganizInterface } from '../../models/organization-model';
+import { OrganizationService } from '../../services/organization.service';
 import { NgForm } from '@angular/forms';
 
 @Component({

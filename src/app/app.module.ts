@@ -3,15 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { TopListItemComponent } from './top-list-component/top-list-item/top-list-item.component';
-import { StatCardComponent } from './stat-card-component/stat-card.component';
-import { TopListComponent } from './top-list-component/top-list.component';
-import { AllOrganizationComponent } from './all-organization/all-organization.component';
+import { HeaderComponent } from './components/header/header.component';
+import { TopListItemComponent } from './components/top-list-component/top-list-item/top-list-item.component';
+import { StatCardComponent } from './components/stat-card-component/stat-card.component';
+import { TopListComponent } from './components/top-list-component/top-list.component';
+import { AllOrganizationComponent } from './components/all-organization/all-organization.component';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
-import { EditFormComponent } from './edit-form/edit-form.component';
+import { EditFormComponent } from './components/edit-form/edit-form.component';
 import { FormsModule } from '@angular/forms';
+import { RegistrationComponent } from './pages/registration/registration.component';
+import { OrganizationPageComponent } from './pages/organization-page/organization-page.component';
+import { SingInComponent } from './pages/sing-in/sing-in.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,9 @@ import { FormsModule } from '@angular/forms';
     TopListItemComponent,
     AllOrganizationComponent,
     EditFormComponent,
+    RegistrationComponent,
+    OrganizationPageComponent,
+    SingInComponent,
   ],
   imports: [
     BrowserModule,

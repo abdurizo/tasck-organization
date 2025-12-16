@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { OrganizInterface } from '../models/organization-model';
-import { OrganizationService } from '../services/organization.service';
+import { OrganizInterface } from '../../models/organization-model';
+import { OrganizationService } from '../../services/organization.service';
 
 @Component({
   selector: 'app-all-organization',
@@ -28,7 +28,7 @@ export class AllOrganizationComponent implements OnInit {
   openModal(id: number) {
     this.selectedId = id;
     this.isOpen = true;
-    console.log(this.isOpen);
+    // console.log(this.isOpen);
   }
   closeModal() {
     this.isOpen = false;

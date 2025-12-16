@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Cours } from '../../models/organization-model';
+import { Cours } from '../../../models/organization-model';
 
 
 @Component({
@@ -13,7 +13,7 @@ export class TopListItemComponent {
     bg: string;
     text: string;
   };
-  @Input()
+  // @Input()
   cours: Cours[] = [
     {
       id: 1,
