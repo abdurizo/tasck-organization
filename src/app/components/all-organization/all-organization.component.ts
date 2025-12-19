@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 import { OrganizInterface } from '../../models/organization-model';
 import { OrganizationService } from '../../services/organization.service';
 
@@ -12,17 +12,22 @@ export class AllOrganizationComponent implements OnInit {
   selectedId!: number;
   isOpen = false;
 
-  constructor(private organization: OrganizationService,   private cd: ChangeDetectorRef) {
-    // this.organizDate = this.organization.listOfData;
-  }
+  constructor(
+    private organization: OrganizationService,
+    private cd: ChangeDetectorRef
+  ) {}
   ngOnInit() {
     // Загружаем из localStorage или используем дефолтные данные
+    // const stored = this.organization.listOfData;
     const stored = localStorage.getItem('organizations');
     if (stored) {
-      this.organizDate = JSON.parse(stored);
+        this.organizDate = JSON.parse(stored);
+      //  this.organizDate = this.organization.listOfData;
+      // localStorage.setItem('organizations', JSON.stringify(this.organizDate));
     } else {
-      this.organizDate = this.organization.listOfData;
+       this.organizDate = this.organization.listOfData;
       localStorage.setItem('organizations', JSON.stringify(this.organizDate));
+      //  this.organizDate = JSON.parse(stored);
     }
   }
   openModal(id: number) {
@@ -35,7 +40,7 @@ export class AllOrganizationComponent implements OnInit {
   }
   onSaved(updated: OrganizInterface) {
     // 1) заменяем только тот объект, создаём новый объект (spread)
-    const idx = this.organizDate.findIndex(org => org.id === updated.id);
+    const idx = this.organizDate.findIndex((org) => org.id === updated.id);
     if (idx !== -1) {
       this.organizDate[idx] = { ...updated }; // новый объект вместо мутации существующего
     }

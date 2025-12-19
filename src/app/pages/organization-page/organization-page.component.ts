@@ -8,8 +8,8 @@ import { StatService } from '../../services/stat.service';
   styleUrl: './organization-page.component.css'
 })
 export class OrganizationPageComponent {
-stat!: StatInterface[];
+stats!: StatInterface[];
   constructor(private statService: StatService) {
-    this.stat = statService.statData;
+    this.stats = statService.statData;
   }
 }

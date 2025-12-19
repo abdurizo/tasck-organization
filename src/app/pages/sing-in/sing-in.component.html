@@ -1,13 +1,42 @@
 <div class="form_wrap">
-  <form #f="ngForm" class="form">
+  <form class="form" #f="ngForm" (ngSubmit)="submit(f)">
     <div class="wrap_input">
-      <label for="name" class="label">Email</label>
-      <input type="email" id="name" class="input" placeholder="Your email" />
+      <label class="label"> Email </label>
+      <input
+        type="email"
+        name="email"
+        ngModel
+        class="input"
+        placeholder="Your email"
+        required
+        #email="ngModel"
+      />
+      <small
+        *ngIf="email.errors?.['required'] && (email.touched || f.submitted)"
+      >
+        Email entry is required
+      </small>
     </div>
     <div class="wrap_input">
       <label for="name" class="label">Password</label>
-      <input type="text" id="name" class="input" placeholder="Your password" />
+      <input
+        type="text"
+        id="name"
+        class="input"
+        placeholder="Your password"
+        name="password"
+        ngModel
+        required
+        #password="ngModel"
+      />
+      <small
+        *ngIf="password.errors?.['required'] && (password.touched || f.submitted)"
+      >
+        Password entry is required
+      </small>
     </div>
-    <button class="button">sing-in</button>
+    <small>{{error}} </small>
+    <button class="button" type="submit">sing-in</button>
+    
   </form>
 </div>
