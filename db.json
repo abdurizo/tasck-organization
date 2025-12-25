@@ -1,16 +1,16 @@
 {
   "listOfData": [
     {
-      "id": 1,
-      "organ": "Otcom",
-      "status": "Active",
+      "id": "1",
+      "organ": "AAA",
+      "status": "Inactive",
       "cours": 65,
       "batch": 1,
-      "price": "$2.42",
+      "price": "$85",
       "actions": "Edit"
     },
     {
-      "id": 2,
+      "id": "2",
       "organ": "Sonair",
       "status": "Inactive",
       "cours": 59,
@@ -19,7 +19,7 @@
       "actions": "Edit"
     },
     {
-      "id": 3,
+      "id": "3",
       "organ": "Bytecard",
       "status": "Active",
       "cours": 43,
@@ -28,7 +28,7 @@
       "actions": "Edit"
     },
     {
-      "id": 4,
+      "id": "4",
       "organ": "Overhold",
       "status": "Active",
       "cours": 72,
@@ -37,13 +37,75 @@
       "actions": "Edit"
     },
     {
-      "id": 5,
+      "id": "5",
       "organ": "Trippledex",
       "status": "Active",
       "cours": 69,
       "batch": 5,
       "price": "$8.29",
       "actions": "Edit"
+    }
+  ],
+  "statData": [
+    {
+      "id": "1",
+      "title": "Arliene",
+      "count": 1,
+      "icon": "AE",
+      "stat_percentage": 69
+    },
+    {
+      "id": "2",
+      "title": "Verne",
+      "count": 2,
+      "icon": "US",
+      "stat_percentage": 94
+    },
+    {
+      "id": "3",
+      "title": "Margalit",
+      "count": 3,
+      "icon": "CA",
+      "stat_percentage": 22
+    },
+    {
+      "id": "4",
+      "title": "Van",
+      "count": 4,
+      "icon": "US",
+      "stat_percentage": 51
+    }
+  ],
+  "registerData": [
+    {
+      "id": "a575",
+      "name": "Abdurizo",
+      "email": "Abdontiy1998@mail.ru",
+      "password": "789"
+    },
+    {
+      "id": "eb35",
+      "name": "AAA",
+      "email": "vtessier1@icio.us",
+      "password": "111"
+    },
+    {
+      "id": "7043",
+      "name": "aa",
+      "email": "test2",
+      "password": "123"
+    },
+    {
+      "id": "11ec",
+      "name": "test1",
+      "email": "Abdontiy1998@mail.ru",
+      "password": "123"
+    },
+    {
+      "id": "cfbb",
+      "name": "Abdurizo",
+      "email": "test2",
+      "password": "258"
     }
   ]
 }

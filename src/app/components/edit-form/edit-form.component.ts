@@ -1,4 +1,12 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnChanges,
+  Output,
+  output,
+  SimpleChanges,
+} from '@angular/core';
 import { OrganizInterface } from '../../models/organization-model';
 import { OrganizationService } from '../../services/organization.service';
 import { NgForm } from '@angular/forms';
@@ -8,28 +16,43 @@ import { NgForm } from '@angular/forms';
   templateUrl: './edit-form.component.html',
   styleUrl: './edit-form.component.css',
 })
-export class EditFormComponent implements OnInit {
-  @Output() saved = new EventEmitter<OrganizInterface>();
-  @Input()
-  organizId!: number;
+export class EditFormComponent implements OnChanges {
   organizDate!: OrganizInterface;
-  constructor(private organization: OrganizationService) {}
-  ngOnInit() {
-    const stored = localStorage.getItem('organizations');
-    const list: OrganizInterface[] = stored
-      ? JSON.parse(stored)
-      : this.organization.listOfData;
-    const organiz = list.find((o) => o.id === this.organizId);
-
-    if (organiz) {
-      // Клонируем, чтобы не мутировать оригинал в таблице
-      this.organizDate = { ...organiz };
+  @Input()
+  id!: number;
+  @Output()
+  updated = new EventEmitter<OrganizInterface>();
+  @Output()
+  closed = new EventEmitter();
+  /**
+   *
+   * @param organizationService
+   */
+  constructor(private organizationService: OrganizationService) {}
+  /**
+   *
+   * @param changes
+   */
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['id'] && this.id) {
+      this.loadData();
     }
   }
- submit(form: NgForm) {
-    if (form.valid) {
-      // отправляем обновлённый объект родителю
-      this.saved.emit(this.organizDate);
+  async loadData() {
+    const data = await this.organizationService.getById(this.id);
+    if (data) {
+      this.organizDate = data;
+    }
+  }
+  async submit(form: NgForm) {
+    if (form.invalid) return;
+    const updatedOrg = await this.organizationService.patchById(
+      this.organizDate.id,
+      form.value
+    );
+    if (updatedOrg) {
+      this.updated.emit(updatedOrg);
+      this.closed.emit();
     }
   }
 }

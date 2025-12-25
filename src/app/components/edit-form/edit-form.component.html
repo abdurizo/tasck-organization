@@ -1,4 +1,4 @@
-<form #f="ngForm" (ngSubmit)="submit(f)">
+<form *ngIf="organizDate" #f="ngForm" (ngSubmit)="submit(f)">
   <p class="input_name">Организация</p>
   <input name="organ" [(ngModel)]="organizDate.organ" class="input" />
 

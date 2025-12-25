@@ -10,6 +10,9 @@ import { StatService } from '../../services/stat.service';
 export class OrganizationPageComponent {
 stats!: StatInterface[];
   constructor(private statService: StatService) {
-    this.stats = statService.statData;
+    // this.stats = statService.statData;
+    this.statService.getStatData().then((data)=>{
+      this.stats = data
+    })
   }
 }

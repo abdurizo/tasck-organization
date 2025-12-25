@@ -36,6 +36,6 @@
 <div class="modal" *ngIf="isOpen">
   <div class="modal-content">
     <button class="close" (click)="closeModal()">✖</button>
-    <app-edit-form [organizId]="selectedId" (saved)="onSaved($event)"></app-edit-form>
+    <app-edit-form [id]="selectedId" (updated)="onUpdated($event)" (closed)="closeModal()"></app-edit-form>
   </div>
 </div>

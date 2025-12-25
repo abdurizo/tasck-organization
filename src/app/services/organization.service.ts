@@ -5,56 +5,39 @@ import { OrganizInterface } from '../models/organization-model';
   providedIn: 'root',
 })
 export class OrganizationService {
-  listOfData: OrganizInterface[] = [
-    {
-      id: 1,
-      organ: 'Otcom',
-      status: 'Active',
-      cours: 65,
-      batch: 1,
-      price: '$2.42',
-      actions: 'Edit',
-    },
-    {
-      id: 2,
-      organ: 'Sonair',
-      status: 'Inactive',
-      cours: 59,
-      batch: 2,
-      price: '$4.96',
-      actions: 'Edit',
-    },
-    {
-      id: 3,
-      organ: 'Bytecard',
-      status: 'Active',
-      cours: 43,
-      batch: 3,
-      price: '$2.10',
-      actions: 'Edit',
-    },
-    {
-      id: 4,
-      organ: 'Overhold',
-      status: 'Active',
-      cours: 72,
-      batch: 4,
-      price: '$9.77',
-      actions: 'Edit',
-    },
-    {
-      id: 5,
-      organ: 'Trippledex',
-      status: 'Active',
-      cours: 69,
-      batch: 5,
-      price: '$8.29',
-      actions: 'Edit',
-    },
-  ];
-  getById(id:number):OrganizInterface | undefined{
-    return this.listOfData.find((i)=>i.id===id)
+  url = 'http://localhost:3000/listOfData';
+  async getOrganDate(): Promise<OrganizInterface[]> {
+    const data = await fetch(this.url);
+    return (await data.json()) ?? [];
   }
-  constructor() {}
- 
+
+  /**
+   *
+   * @param id
+   * @returns
+   */
+
+  async getById(id: number): Promise<OrganizInterface | undefined> {
+    const dataID = await fetch(`${this.url}/${id}`);
+    if (!dataID.ok) {
+      return undefined;
+    }
+    return await dataID.json();
+  }
+  /**
+   *
+   */
+  async patchById(
+    id: number,
+    body: Partial<OrganizInterface>
+  ): Promise<OrganizInterface | undefined> {
+    const res = await fetch(`${this.url}/${id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body),
+    });
+    return await res.json();
+  }
 }

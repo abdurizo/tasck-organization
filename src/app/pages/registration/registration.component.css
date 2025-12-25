@@ -31,3 +31,8 @@
     color: #fff;
     cursor: pointer;
 }
+.sing_in{
+  text-decoration-line: underline;
+  display: block;
+  text-align: center;
+}
