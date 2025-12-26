@@ -4,9 +4,22 @@
     background-color: #fff;
     margin-top: 20px;
 }
+.hat{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+}
 .title{
     padding: 10px;
     font-size: 16px;
+}
+.hat_button{
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #134ce9ab;
+  color: #fff;
 }
 .status_active,
 .status_inactive{

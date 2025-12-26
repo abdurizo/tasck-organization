@@ -11,7 +11,8 @@ export class AllOrganizationComponent {
   organizDate!: OrganizInterface[];
   selectedId!: number;
   isOpen = false;
-
+  isOpenAdd = false;
+  
   constructor(private organizationService: OrganizationService) {
     this.organizationService.getOrganDate().then((data) => {
       this.organizDate = data;
@@ -25,8 +26,13 @@ export class AllOrganizationComponent {
     this.selectedId = id;
     this.isOpen = true;
   }
+  openModalAdd() {
+    this.isOpenAdd = true;
+  }
+
   closeModal() {
     this.isOpen = false;
+    this.isOpenAdd =false
   }
   /***
    *

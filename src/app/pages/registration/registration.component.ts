@@ -9,7 +9,10 @@ import { RegisterService } from '../../services/register.service';
   styleUrl: './registration.component.css',
 })
 export class RegistrationComponent {
-  constructor(private router: Router, private registerService:RegisterService) {}
+  constructor(
+    private router: Router,
+    private registerService: RegisterService
+  ) {}
 
   submit(form: NgForm) {
     if (form.invalid) {
@@ -17,9 +20,9 @@ export class RegistrationComponent {
       return;
     }
     const registationForm = form.value;
-    const post = this.registerService.postRegister(registationForm);
-    localStorage.setItem('registationForm', JSON.stringify(registationForm));
+    this.registerService.postRegister(registationForm);
+   
     form.resetForm();
-    this.router.navigate(['sing-in']);    
+    this.router.navigate(['sing-in']);
   }
 }

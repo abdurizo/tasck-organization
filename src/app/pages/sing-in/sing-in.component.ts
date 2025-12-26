@@ -40,6 +40,7 @@ export class SingInComponent {
       (u) => u.email === email && u.password === password
     );
     if (!user) {
+      this.error = 'You entered an incorrect password or email';
       return;
     }
 

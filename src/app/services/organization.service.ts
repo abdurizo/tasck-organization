@@ -10,7 +10,6 @@ export class OrganizationService {
     const data = await fetch(this.url);
     return (await data.json()) ?? [];
   }
-
   /**
    *
    * @param id
@@ -39,5 +38,15 @@ export class OrganizationService {
       body: JSON.stringify(body),
     });
     return await res.json();
+  }
+  async postOrganDate(body:Partial<OrganizInterface>):Promise<OrganizInterface>{
+    const data = await fetch(this.url,{
+      method:'POST',
+      headers:{
+         'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body),
+    });
+    return (await data.json())
   }
 }

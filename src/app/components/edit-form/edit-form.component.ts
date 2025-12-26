@@ -19,7 +19,7 @@ import { NgForm } from '@angular/forms';
 export class EditFormComponent implements OnChanges {
   organizDate!: OrganizInterface;
   @Input()
-  id!: number;
+  id!: number ;
   @Output()
   updated = new EventEmitter<OrganizInterface>();
   @Output()

@@ -1,5 +1,8 @@
 <div class="wrap">
-  <h2 class="title">Все организации</h2>
+  <div class="hat">
+    <h2 class="title">Все организации</h2>
+    <button class="hat_button" (click)="openModalAdd()">Добавить организацию</button>
+  </div>
   <nz-table #basicTable [nzData]="organizDate">
     <thead>
       <tr>
@@ -37,5 +40,12 @@
   <div class="modal-content">
     <button class="close" (click)="closeModal()">✖</button>
     <app-edit-form [id]="selectedId" (updated)="onUpdated($event)" (closed)="closeModal()"></app-edit-form>
+  </div>
+</div>
+
+<div class="modal" *ngIf="isOpenAdd">
+  <div class="modal-content">
+    <button class="close" (click)="closeModal()">✖</button>
+   <app-add-form></app-add-form>
   </div>
 </div>
