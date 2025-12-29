@@ -12,7 +12,7 @@ export class AllOrganizationComponent {
   selectedId!: number;
   isOpen = false;
   isOpenAdd = false;
-  
+
   constructor(private organizationService: OrganizationService) {
     this.organizationService.getOrganDate().then((data) => {
       this.organizDate = data;
@@ -32,7 +32,7 @@ export class AllOrganizationComponent {
 
   closeModal() {
     this.isOpen = false;
-    this.isOpenAdd =false
+    this.isOpenAdd = false;
   }
   /***
    *
@@ -43,5 +43,13 @@ export class AllOrganizationComponent {
       this.organizDate[index] = org;
       this.organizDate = [...this.organizDate];
     }
+  }
+  async delete(id: number) {
+    await this.organizationService.deleteId(id);
+    this.organizDate = this.organizDate.filter((i) => i.id !== id);
+  }
+  onAdded(newOrg: OrganizInterface) {
+   this.organizDate =[...this.organizDate,newOrg] 
+    this.closeModal()
   }
 }

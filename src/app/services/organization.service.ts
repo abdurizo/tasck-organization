@@ -6,6 +6,10 @@ import { OrganizInterface } from '../models/organization-model';
 })
 export class OrganizationService {
   url = 'http://localhost:3000/listOfData';
+  /**
+   *
+   * @returns
+   */
   async getOrganDate(): Promise<OrganizInterface[]> {
     const data = await fetch(this.url);
     return (await data.json()) ?? [];
@@ -39,14 +43,24 @@ export class OrganizationService {
     });
     return await res.json();
   }
-  async postOrganDate(body:Partial<OrganizInterface>):Promise<OrganizInterface>{
-    const data = await fetch(this.url,{
-      method:'POST',
-      headers:{
-         'Content-Type': 'application/json',
+  async postOrganDate(
+    body: Partial<OrganizInterface>
+  ): Promise<OrganizInterface> {
+    const data = await fetch(this.url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify(body),
     });
-    return (await data.json())
+    return await data.json();
+  }
+  /**
+   *
+   */
+  async deleteId(id: number): Promise<void> {
+    const res = await fetch(`${this.url}/${id}`, {
+      method: 'DELETE',
+    });
   }
 }

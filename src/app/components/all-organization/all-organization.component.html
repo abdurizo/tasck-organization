@@ -30,7 +30,10 @@
         <td>{{ data.cours }}</td>
         <td>{{ data.batch }}</td>
         <td>{{ data.price }}</td>
-        <td class="edit" (click)="openModal(data.id)">✏️ {{ data.actions }}</td>
+        <td >          
+          <button class="edit" (click)="openModal(data.id)">✏️ Edit |</button>
+          <button class="delete" (click)="delete(data.id)">🗑️ Delete</button>
+        </td> 
       </tr>
     </tbody>
   </nz-table>
@@ -46,6 +49,6 @@
 <div class="modal" *ngIf="isOpenAdd">
   <div class="modal-content">
     <button class="close" (click)="closeModal()">✖</button>
-   <app-add-form></app-add-form>
+   <app-add-form (submitted)="onAdded($event)"></app-add-form>
   </div>
 </div>

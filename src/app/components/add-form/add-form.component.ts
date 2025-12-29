@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { RegisterService } from '../../services/register.service';
 import { NgForm } from '@angular/forms';
 import { OrganizInterface } from '../../models/organization-model';
+import { OrganizationService } from '../../services/organization.service';
 
 @Component({
   selector: 'app-add-form',
@@ -9,18 +10,23 @@ import { OrganizInterface } from '../../models/organization-model';
   styleUrl: './add-form.component.css',
 })
 export class AddFormComponent {
-   organizDate!: OrganizInterface;
-  constructor(private registerService: RegisterService) {}
+  // organizDate!: OrganizInterface;
+  @Output()
+  submitted = new EventEmitter<OrganizInterface>();
+  constructor(private organizationService: OrganizationService) {}
   /**
    *
    */
-  submit(form: NgForm) {
+  async submit(form: NgForm) {
     if (form.invalid) {
       form.form.markAllAsTouched();
       return;
     }
     const addOrganization = form.value;
-    this.registerService.postRegister(addOrganization);
+    const newOrgan = await this.organizationService.postOrganDate(
+      addOrganization
+    );
     form.resetForm();
+    this.submitted.emit(newOrgan);
   }
 }

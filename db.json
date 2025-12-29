@@ -1,49 +1,28 @@
 {
   "listOfData": [
     {
-      "id": "1",
-      "organ": "NNN",
+      "id": "a3f3",
+      "organ": "Otcom",
+      "status": "Active",
+      "cours": "65",
+      "batch": "1",
+      "price": "$2.42"
+    },
+    {
+      "id": "b1b1",
+      "organ": "AAA",
+      "status": "Active",
+      "cours": "65",
+      "batch": "5",
+      "price": "$2.42"
+    },
+    {
+      "id": "9b7c",
+      "organ": "EEE",
       "status": "Inactive",
       "cours": "165",
-      "batch": "11",
-      "price": "$850",
-      "actions": "Edit"
-    },
-    {
-      "id": "2",
-      "organ": "Sonair",
-      "status": "Inactive",
-      "cours": 59,
-      "batch": 2,
-      "price": "$4.96",
-      "actions": "Edit"
-    },
-    {
-      "id": "3",
-      "organ": "Bytecard",
-      "status": "Active",
-      "cours": 43,
-      "batch": 3,
-      "price": "$2.10",
-      "actions": "Edit"
-    },
-    {
-      "id": "4",
-      "organ": "Overhold",
-      "status": "Active",
-      "cours": 72,
-      "batch": 4,
-      "price": "$9.77",
-      "actions": "Edit"
-    },
-    {
-      "id": "5",
-      "organ": "Trippledex",
-      "status": "Active",
-      "cours": 69,
-      "batch": 5,
-      "price": "$8.29",
-      "actions": "Edit"
+      "batch": "",
+      "price": "$2.42"
     }
   ],
   "statData": [
@@ -96,183 +75,10 @@
       "password": "111"
     },
     {
-      "id": "92d2"
-    },
-    {
-      "id": "23ac"
-    },
-    {
-      "id": "958d"
-    },
-    {
-      "id": "6da7"
-    },
-    {
-      "id": "6c9e"
-    },
-    {
-      "id": "c024"
-    },
-    {
-      "id": "719a"
-    },
-    {
-      "id": "afc4"
-    },
-    {
-      "id": "49f5"
-    },
-    {
-      "id": "ab4d"
-    },
-    {
-      "id": "dd43"
-    },
-    {
-      "id": "4979"
-    },
-    {
-      "id": "4224"
-    },
-    {
-      "id": "8e88"
-    },
-    {
-      "id": "9a75"
-    },
-    {
-      "id": "305c"
-    },
-    {
-      "id": "4850"
-    },
-    {
-      "id": "927b"
-    },
-    {
-      "id": "a3c6"
-    },
-    {
-      "id": "de56"
-    },
-    {
-      "id": "48d7"
-    },
-    {
-      "id": "4a19"
-    },
-    {
-      "id": "5076"
-    },
-    {
-      "id": "3346"
-    },
-    {
-      "id": "af55"
-    },
-    {
-      "id": "7b2b"
-    },
-    {
-      "id": "6ed8"
-    },
-    {
-      "id": "d7ff"
-    },
-    {
-      "id": "ae56"
-    },
-    {
-      "id": "8647"
-    },
-    {
-      "id": "5b46"
-    },
-    {
-      "id": "4ac4"
-    },
-    {
-      "id": "e9c1"
-    },
-    {
-      "id": "7cf0"
-    },
-    {
-      "id": "57e8"
-    },
-    {
-      "id": "1d3f"
-    },
-    {
-      "id": "7b13"
-    },
-    {
-      "id": "3838"
-    },
-    {
-      "id": "9d8f"
-    },
-    {
-      "id": "f1e6"
-    },
-    {
-      "id": "447f"
-    },
-    {
-      "id": "d9ae"
-    },
-    {
-      "id": "fcd1"
-    },
-    {
-      "id": "840a"
-    },
-    {
-      "id": "11f4"
-    },
-    {
-      "id": "a963"
-    },
-    {
-      "id": "50a9"
-    },
-    {
-      "id": "e238"
-    },
-    {
-      "id": "27a5"
-    },
-    {
-      "id": "b8ac"
-    },
-    {
-      "id": "bbd5"
-    },
-    {
-      "id": "7668"
-    },
-    {
-      "id": "1d5b"
-    },
-    {
-      "id": "269f"
-    },
-    {
-      "id": "41bb"
-    },
-    {
-      "id": "7b16"
-    },
-    {
-      "id": "ca29"
-    },
-    {
-      "id": "7c35",
-      "organ": "Otcom",
-      "status": "Active",
-      "cours": "65",
-      "batch": "5t55t",
-      "price": "$2.42"
+      "id": "0eab",
+      "name": "Jasur",
+      "email": "jasurZ@mail.ru",
+      "password": "jas5"
     }
   ]
 }

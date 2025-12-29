@@ -5,7 +5,9 @@ import { RegisterInterface } from '../models/register-model';
   providedIn: 'root',
 })
 export class RegisterService {
-  async postRegister(body:Partial<RegisterInterface>):Promise<RegisterInterface | undefined> {
+  async postRegister(
+    body: Partial<RegisterInterface>
+  ): Promise<RegisterInterface | undefined> {
     const data = await fetch('http://localhost:3000/registerData', {
       method: 'POST',
       headers: {
@@ -13,10 +15,10 @@ export class RegisterService {
       },
       body: JSON.stringify(body),
     });
-    return await data.json()
+    return await data.json();
   }
-  async getRegister():Promise<RegisterInterface[]>{
+  async getRegister(): Promise<RegisterInterface[]> {
     const data = await fetch('http://localhost:3000/registerData');
-    return await data.json()
+    return await data.json();
   }
 }
