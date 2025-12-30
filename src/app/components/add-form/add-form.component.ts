@@ -10,7 +10,6 @@ import { OrganizationService } from '../../services/organization.service';
   styleUrl: './add-form.component.css',
 })
 export class AddFormComponent {
-  // organizDate!: OrganizInterface;
   @Output()
   submitted = new EventEmitter<OrganizInterface>();
   constructor(private organizationService: OrganizationService) {}

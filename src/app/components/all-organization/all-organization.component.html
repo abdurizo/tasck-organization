@@ -1,7 +1,9 @@
 <div class="wrap">
   <div class="hat">
     <h2 class="title">Все организации</h2>
-    <button class="hat_button" (click)="openModalAdd()">Добавить организацию</button>
+    <button class="hat_button" (click)="openModalAdd()">
+      Добавить организацию
+    </button>
   </div>
   <nz-table #basicTable [nzData]="organizDate">
     <thead>
@@ -20,35 +22,52 @@
         <td>
           <div
             [ngClass]="{
-              'status_active': data.status === 'Active',
-              'status_inactive': data.status === 'Inactive'
+              status_active: data.status === 'Active',
+              status_inactive: data.status === 'Inactive'
             }"
           >
-            {{ data.status}}
+            {{ data.status }}
           </div>
         </td>
         <td>{{ data.cours }}</td>
         <td>{{ data.batch }}</td>
         <td>{{ data.price }}</td>
-        <td >          
+        <td>
           <button class="edit" (click)="openModal(data.id)">✏️ Edit |</button>
-          <button class="delete" (click)="delete(data.id)">🗑️ Delete</button>
-        </td> 
+          <button class="delete" (click)="openModalDelete(data.id)">🗑️ Delete</button>
+        </td>
       </tr>
     </tbody>
   </nz-table>
 </div>
-<!-- MODAL -->
+<!-- MODAL EDIT-->
 <div class="modal" *ngIf="isOpen">
   <div class="modal-content">
     <button class="close" (click)="closeModal()">✖</button>
-    <app-edit-form [id]="selectedId" (updated)="onUpdated($event)" (closed)="closeModal()"></app-edit-form>
+    <app-edit-form
+      [id]="selectedId"
+      (updated)="onUpdated($event)"
+      (closed)="closeModal()"
+    ></app-edit-form>
   </div>
 </div>
-
+<!-- MODAL ADD -->
 <div class="modal" *ngIf="isOpenAdd">
   <div class="modal-content">
     <button class="close" (click)="closeModal()">✖</button>
-   <app-add-form (submitted)="onAdded($event)"></app-add-form>
+    <app-add-form (submitted)="onAdded($event)"></app-add-form>
+  </div>
+</div>
+<!-- MODAL DELETE -->
+<div class="modal" *ngIf="isOpenDelete">
+  <div class="modal-content">
+    <button class="close" (click)="closeModal()">✖</button>
+   <div class="modal_delete_wrap">
+    <p class="modal_delete_text">Do you really want to delete this organization?</p>
+    <div class="modal_delete_btn_wrap">
+      <button class="modal_delete_btn" (click)="closeModal()  ">No</button>
+      <button class="modal_delete_btn" (click)="delete(selectedId)">Yes</button>
+    </div>
+   </div>
   </div>
 </div>

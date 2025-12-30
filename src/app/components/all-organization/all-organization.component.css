@@ -74,3 +74,19 @@ background-color: #67fa8c4f;
   font-size: 20px;
   cursor: pointer;
 }
+.modal_delete_text{
+  font-size: 16px;
+}
+.modal_delete_btn_wrap{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 10px;
+}
+.modal_delete_btn{
+  padding:5px 20px;
+  background-color: #7742f3c4;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+}
