@@ -1,14 +1,6 @@
 {
   "listOfData": [
     {
-      "id": "d690",
-      "organ": "Otcom",
-      "status": "Active",
-      "cours": "4",
-      "batch": "4",
-      "price": "$55"
-    },
-    {
       "id": "778a",
       "organ": "Sonair",
       "status": "Inactive",
@@ -17,20 +9,12 @@
       "price": "$4.96"
     },
     {
-      "id": "fbff",
-      "organ": "Json",
+      "id": "bd7b",
+      "organ": "Otcom",
       "status": "Active",
-      "cours": "7",
-      "batch": "4",
+      "cours": "165",
+      "batch": "11",
       "price": "$850"
-    },
-    {
-      "id": "dec5",
-      "organ": "ZargarProgect",
-      "status": "Active",
-      "cours": "6",
-      "batch": "1",
-      "price": "$2.42"
     }
   ],
   "statData": [

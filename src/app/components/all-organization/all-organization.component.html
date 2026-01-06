@@ -33,41 +33,50 @@
         <td>{{ data.batch }}</td>
         <td>{{ data.price }}</td>
         <td>
-          <button class="edit" (click)="openModal(data.id)">✏️ Edit |</button>
-          <button class="delete" (click)="openModalDelete(data.id)">🗑️ Delete</button>
+          <button class="edit" (click)="openModalEdit(data.id)">✏️ Edit |</button>
+          <button class="delete" (click)="openModalDelete(data.id)">
+            🗑️ Delete
+          </button>
         </td>
       </tr>
     </tbody>
   </nz-table>
 </div>
-<!-- MODAL EDIT-->
-<div class="modal" *ngIf="isOpen">
+
+<div class="modal" *ngIf="modalType">
   <div class="modal-content">
     <button class="close" (click)="closeModal()">✖</button>
+
+    <!-- EDIT -->
     <app-edit-form
-      [id]="selectedId"
+      *ngIf="modalType === 'edit'"
+      [id]="selectedId!"
       (updated)="onUpdated($event)"
       (closed)="closeModal()"
     ></app-edit-form>
-  </div>
-</div>
-<!-- MODAL ADD -->
-<div class="modal" *ngIf="isOpenAdd">
-  <div class="modal-content">
-    <button class="close" (click)="closeModal()">✖</button>
-    <app-add-form (submitted)="onAdded($event)"></app-add-form>
-  </div>
-</div>
-<!-- MODAL DELETE -->
-<div class="modal" *ngIf="isOpenDelete">
-  <div class="modal-content">
-    <button class="close" (click)="closeModal()">✖</button>
-   <div class="modal_delete_wrap">
-    <p class="modal_delete_text">Do you really want to delete this organization?</p>
-    <div class="modal_delete_btn_wrap">
-      <button class="modal_delete_btn" (click)="closeModal()  ">No</button>
-      <button class="modal_delete_btn" (click)="delete(selectedId)">Yes</button>
+
+    <!-- ADD -->
+    <app-add-form
+      *ngIf="modalType === 'add'"
+      (submitted)="onAdded($event)"
+    ></app-add-form>
+
+    <!-- DELETE -->
+    <div *ngIf="modalType === 'delete'" class="modal_delete_wrap">
+      <p class="modal_delete_text">
+        Do you really want to delete this organization?
+      </p>
+
+      <div class="modal_delete_btn_wrap">
+        <button class="modal_delete_btn" (click)="closeModal()">No</button>
+        <button class="modal_delete_btn" (click)="delete(selectedId!)">
+          Yes
+        </button>
+      </div>
     </div>
-   </div>
   </div>
 </div>
+
+
+
+

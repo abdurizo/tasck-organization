@@ -16,6 +16,7 @@ import { RegistrationComponent } from './pages/registration/registration.compone
 import { OrganizationPageComponent } from './pages/organization-page/organization-page.component';
 import { SingInComponent } from './pages/sing-in/sing-in.component';
 import { AddFormComponent } from './components/add-form/add-form.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { AddFormComponent } from './components/add-form/add-form.component';
     OrganizationPageComponent,
     SingInComponent,
     AddFormComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,

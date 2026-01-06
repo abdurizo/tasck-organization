@@ -10,10 +10,14 @@ import { OrganizationService } from '../../services/organization.service';
 export class AllOrganizationComponent {
   organizDate!: OrganizInterface[];
   selectedId!: number;
-  isOpen = false;
-  isOpenAdd = false;
-  isOpenDelete = false;
-  isDelete = false;
+  /**
+   *
+   */
+  modalType: 'add' | 'edit' | 'delete' | null = null;
+  /**
+   *
+   * @param organizationService
+   */
   constructor(private organizationService: OrganizationService) {
     this.organizationService.getOrganDate().then((data) => {
       this.organizDate = data;
@@ -23,21 +27,19 @@ export class AllOrganizationComponent {
    *
    * @param id
    */
-  openModal(id: number) {
+  openModalEdit(id: number) {
     this.selectedId = id;
-    this.isOpen = true;
+    this.modalType = 'edit';
   }
   openModalAdd() {
-    this.isOpenAdd = true;
+    this.modalType = 'add';
   }
-  openModalDelete(id:number) {
-    this.isOpenDelete = true;
+  openModalDelete(id: number) {
+    this.modalType = 'delete';
     this.selectedId = id;
   }
   closeModal() {
-    this.isOpen = false;
-    this.isOpenAdd = false;
-    this.isOpenDelete = false;
+    this.modalType = null;
   }
   /***
    *
@@ -53,7 +55,7 @@ export class AllOrganizationComponent {
     // this.isOpenDelete = true;
     await this.organizationService.deleteId(id);
     this.organizDate = this.organizDate.filter((i) => i.id !== id);
-    this.isOpenDelete = false;
+    this.modalType = null;
   }
   onAdded(newOrg: OrganizInterface) {
     this.organizDate = [...this.organizDate, newOrg];
