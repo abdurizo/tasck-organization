@@ -11,16 +11,13 @@
     font-size: 14px;
     color: #919090;
 }
-.add_organizftion{
-    background-color: blue;
-    border-radius: 10px;
-    color: #fff;
-    padding: 10px;
-    margin-left: 10px;
+.block_right{
+    display: flex;
+    gap: 10px;
 }
-.calendar{
-   background-color: #fff;
-   border-radius: 10px;
-   padding: 10px;
-   cursor: pointer;
+.link{
+    border-radius: 10px;
+    border: 1px solid #919090;
+    background-color: #9190902f;
+    padding: 5px 10px;
 }

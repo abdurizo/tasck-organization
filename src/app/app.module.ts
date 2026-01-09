@@ -17,6 +17,8 @@ import { OrganizationPageComponent } from './pages/organization-page/organizatio
 import { SingInComponent } from './pages/sing-in/sing-in.component';
 import { AddFormComponent } from './components/add-form/add-form.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { BasicPageComponent } from './pages/basic-page/basic-page.component';
+import { CardPageComponent } from './pages/card-page/card-page.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { ModalComponent } from './components/modal/modal.component';
     SingInComponent,
     AddFormComponent,
     ModalComponent,
+    BasicPageComponent,
+    CardPageComponent,
   ],
   imports: [
     BrowserModule,

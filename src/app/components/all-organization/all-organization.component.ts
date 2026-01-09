@@ -46,7 +46,10 @@ export class AllOrganizationComponent {
    */
   onUpdated(org: OrganizInterface) {
     const index = this.organizDate.findIndex((i) => i.id === org.id);
+    
     if (index !== -1) {
+      console.log(index !== -1);
+      
       this.organizDate[index] = org;
       this.organizDate = [...this.organizDate];
     }

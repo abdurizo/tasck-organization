@@ -1,20 +1,20 @@
 {
   "listOfData": [
     {
-      "id": "778a",
-      "organ": "Sonair",
-      "status": "Inactive",
-      "cours": "8",
-      "batch": "4",
-      "price": "$4.96"
-    },
-    {
       "id": "bd7b",
       "organ": "Otcom",
       "status": "Active",
-      "cours": "165",
+      "cours": "1601",
       "batch": "11",
       "price": "$850"
+    },
+    {
+      "id": "b609",
+      "organ": "Otcom",
+      "status": "Active",
+      "cours": "65",
+      "batch": "11",
+      "price": "$55"
     }
   ],
   "statData": [
@@ -71,6 +71,12 @@
       "name": "Jasur",
       "email": "jasurZ@mail.ru",
       "password": "jas5"
+    },
+    {
+      "id": "c73f",
+      "name": "Javlon",
+      "email": "Java@mail.ru",
+      "password": "3JEsla"
     }
   ]
 }

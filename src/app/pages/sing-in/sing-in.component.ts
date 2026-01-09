@@ -45,7 +45,7 @@ export class SingInComponent {
     }
 
     if (user) {
-      this.router.navigate(['organization']);
+      this.router.navigate(['dashboard']);
     } else {
       this.error = 'You entered an incorrect password or email';
     }
