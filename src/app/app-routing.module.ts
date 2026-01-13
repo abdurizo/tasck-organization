@@ -32,6 +32,10 @@ const routes: Routes = [
         path: 'card',
         component: CardPageComponent,
       },
+      {
+        path:'card/:id',
+         component: CardPageComponent,
+      },
     ],
   },
 ];

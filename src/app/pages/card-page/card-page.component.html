@@ -1,1 +1,11 @@
-<p>card-page works!</p>
+
+<div class="card" >{{ cardInterface?.name }}</div>
+<div class="buttons">
+  <button
+    class="button"
+    *ngFor="let card of cards"
+    (click)="selectCard(card.id)"
+  >
+    {{ card.id }}
+  </button>
+</div>

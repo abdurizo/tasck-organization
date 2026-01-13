@@ -77,6 +77,34 @@
       "name": "Javlon",
       "email": "Java@mail.ru",
       "password": "3JEsla"
+    },
+    {
+      "id": "4afd",
+      "name": "test2",
+      "email": "vtessier1@icio.us",
+      "password": "123"
+    }
+  ],
+  "cardData":[
+    {
+      "id": 1,
+      "name": "Jasur"
+    },
+    {
+      "id": 2,
+      "name": "Javlon"
+    },
+    {
+      "id": 3,
+      "name": "Abdurizo"
+    },
+    {
+      "id": 4,
+      "name": "Abdurashid"
+    },
+    {
+      "id": 5,
+      "name": "Dilshod"
     }
   ]
 }
